@@ -1,5 +1,5 @@
 
-import { ArrowRight, Download, Linkedin, MessageSquare } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, MessageSquare } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const slides = [
@@ -103,21 +103,31 @@ export function HeroSection() {
       
       {/* Welcome overlay */}
       {showWelcome && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md transition-all animate-fade-in">
-          <div className="max-w-2xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Welcome to My Portfolio</h2>
-            <p className="text-xl text-white/90 mb-10">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-all">
+          <div className="max-w-md w-full mx-auto px-6 py-8 bg-white/90 dark:bg-gray-800/90 rounded-xl shadow-2xl transform animate-scale-in">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Welcome to My Portfolio</h2>
+            <p className="text-foreground/80 mb-6">
               Thank you for visiting my professional portfolio. I'm excited to share my IT expertise and services with you.
             </p>
             <button 
               onClick={() => setShowWelcome(false)}
-              className="btn-hover px-8 py-4 text-lg font-medium text-white bg-primary rounded-full flex items-center gap-2 mx-auto shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+              className="btn-hover px-6 py-3 text-base font-medium text-white bg-primary rounded-full flex items-center gap-2 mx-auto shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
             >
               Get Started <ArrowRight size={20} />
             </button>
           </div>
         </div>
       )}
+      
+      {/* GitHub Projects Highlight */}
+      <div className="absolute top-20 right-0 z-10 max-w-xs overflow-hidden bg-white/10 backdrop-blur-md p-4 rounded-l-lg border-l-4 border-primary">
+        <div className="animate-slide-in-right transform translate-x-full whitespace-nowrap inline-block animate-[slide_20s_linear_infinite]">
+          <span className="text-white font-medium mr-4">For more project information, please follow my GitHub account</span>
+          <a href="https://github.com/count58" target="_blank" rel="noreferrer" className="text-primary hover:underline inline-flex items-center">
+            <Github size={16} className="mr-1" /> github.com/count58
+          </a>
+        </div>
+      </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 text-center">
         <span className="animate-element opacity-0 inline-block px-3 py-1 text-sm font-medium text-primary bg-primary/10 rounded-full mb-6">

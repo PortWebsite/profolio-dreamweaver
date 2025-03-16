@@ -19,7 +19,7 @@ export function Footer() {
           
           <div className="flex space-x-4 mb-6 md:mb-0">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/peter-chuwa-77002488/" 
               target="_blank" 
               rel="noreferrer" 
               className="p-2 rounded-full text-foreground/70 hover:text-primary hover:bg-primary/10 transition-colors"
@@ -46,7 +46,7 @@ export function Footer() {
               <Twitter size={20} />
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/count58" 
               target="_blank" 
               rel="noreferrer" 
               className="p-2 rounded-full text-foreground/70 hover:text-primary hover:bg-primary/10 transition-colors"

@@ -13,35 +13,20 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Network Monitoring Dashboard",
-    description: "Real-time network traffic visualization system with alert capabilities for enterprise environments.",
-    tech: ["Python", "React", "Node.js", "MongoDB", "WebSockets"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
-    url: "#",
-    github: "https://github.com"
+    title: "ChatBot-Vercel",
+    description: "A modern chatbot implementation using AI technologies. This project demonstrates conversational AI capabilities and natural language processing.",
+    tech: ["React", "Node.js", "AI/ML", "Vercel", "JavaScript"],
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    url: "https://github.com/count58/ChatBot-Vercel",
+    github: "https://github.com/count58/ChatBot-Vercel"
   },
   {
-    title: "Automated Backup System",
-    description: "Scheduled backup solution with compression and encryption capabilities for secure data management.",
-    tech: ["PowerShell", "C#", "Azure", "Bash", "AWS S3"],
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    url: "#",
-    github: "https://github.com"
-  },
-  {
-    title: "Security Compliance Tool",
-    description: "Automated security assessment tool that evaluates systems against industry standards and best practices.",
-    tech: ["Python", "Docker", "REST API", "PostgreSQL", "React"],
+    title: "Backend User Data Management",
+    description: "A robust user data management system with a focus on security and data privacy. Implements secure authentication and authorization mechanisms.",
+    tech: ["Python", "Backend", "API", "Security", "Database"],
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    url: "#",
-    github: "https://github.com"
-  },
-  {
-    title: "Inventory Management System",
-    description: "IT asset tracking solution with QR code integration for efficient hardware and software inventory management.",
-    tech: ["JavaScript", "Express", "MongoDB", "React Native", "QR API"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    url: "#"
+    url: "https://github.com/count58/alx-backend-user-data",
+    github: "https://github.com/count58/alx-backend-user-data"
   }
 ];
 
@@ -89,7 +74,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="animate-element opacity-0 glass-card group overflow-hidden"
+              className="animate-element opacity-0 glass-card group overflow-hidden transform transition-all duration-500 hover:translate-y-[-10px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="h-48 overflow-hidden">
@@ -124,6 +109,8 @@ export function ProjectsSection() {
                   <a 
                     href={project.url} 
                     className="btn-hover flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     View Project <ExternalLink size={14} />
                   </a>
@@ -133,6 +120,8 @@ export function ProjectsSection() {
                       href={project.github} 
                       className="btn-hover inline-flex items-center justify-center gap-2 p-2 text-sm font-medium text-foreground/80 bg-secondary/70 dark:bg-secondary/30 rounded-lg"
                       aria-label="View on GitHub"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <Github size={18} />
                     </a>
@@ -141,6 +130,17 @@ export function ProjectsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12 animate-element opacity-0">
+          <a 
+            href="https://github.com/count58" 
+            target="_blank"
+            rel="noreferrer"
+            className="btn-hover inline-flex items-center gap-2 px-6 py-3 bg-white/10 dark:bg-black/30 backdrop-blur-md border border-primary/30 rounded-full text-primary font-medium shadow-lg transition-all duration-300 hover:shadow-xl"
+          >
+            See More Projects on GitHub <Github size={18} />
+          </a>
         </div>
       </div>
     </section>

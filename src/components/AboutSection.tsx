@@ -74,11 +74,11 @@ export function AboutSection() {
           </div>
           
           <div className="animate-element opacity-0 relative">
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-xl relative z-10">
+            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-xl relative z-10">
               <img 
                 src="/about.jpg" 
                 alt="Professional headshot of Peter Chuwa" 
-                className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = 'about.jpg';
