@@ -1,5 +1,5 @@
 
-import { GitHub, Linkedin, MessageSquare, Twitter } from "lucide-react";
+import { Github, Linkedin, MessageSquare, Twitter } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,7 +52,7 @@ export function Footer() {
               className="p-2 rounded-full text-foreground/70 hover:text-primary hover:bg-primary/10 transition-colors"
               aria-label="GitHub"
             >
-              <GitHub size={20} />
+              <Github size={20} />
             </a>
           </div>
         </div>

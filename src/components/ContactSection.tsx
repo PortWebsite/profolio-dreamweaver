@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef, FormEvent } from 'react';
-import { Phone, Mail, Linkedin, GitHub, Check } from 'lucide-react';
+import { Phone, Mail, Linkedin, Github, Check } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 export function ContactSection() {
@@ -138,7 +138,7 @@ export function ContactSection() {
                     className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
                     aria-label="GitHub"
                   >
-                    <GitHub size={18} />
+                    <Github size={18} />
                   </a>
                 </div>
               </div>
