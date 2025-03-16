@@ -18,53 +18,59 @@ interface Certification {
 
 const educations: Education[] = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Technology",
-    year: "2010 - 2014",
+    degree: "MSc. Information Systems Technology",
+    institution: "United States International University - Africa",
+    year: "2019 - 2023",
     details: [
       "Specialized in Network Security and Systems Administration",
-      "Graduated with First Class Honors",
-      "Developed a network monitoring tool as final year project",
-      "Active member of the University Cybersecurity Club"
+      "Advanced research in cybersecurity threat detection",
+      "Developed enterprise IT security frameworks",
+      "Graduated with distinction"
     ]
   },
   {
-    degree: "Diploma in Information Technology",
-    institution: "Technical Institute of Computing",
-    year: "2008 - 2010",
+    degree: "BSc. Hardware and Networking",
+    institution: "Mahatma Gandhi University Meghalaya, India",
+    year: "2015 - 2018",
     details: [
-      "Foundations in programming, hardware, and networking",
-      "Completed with distinction",
-      "Participated in regional IT competitions",
-      "Internship at local IT service provider"
+      "Foundations in computer hardware systems and network infrastructure",
+      "Specialized in network protocols and security",
+      "Participated in international IT competitions",
+      "Completed with first class honors"
     ]
   }
 ];
 
 const certifications: Certification[] = [
   {
-    name: "Cisco Certified Network Professional (CCNP)",
+    name: "ALX Career Essentials",
+    issuer: "ALX",
+    year: "2024 - Current",
+    details: "Focused on career development and essential professional skills."
+  },
+  {
+    name: "ALX Full Stack Software Engineering",
+    issuer: "ALX",
+    year: "Feb 2023 - Apr 2023",
+    details: "Developed skills in full-stack development and software engineering best practices."
+  },
+  {
+    name: "Cyber Shujaa: Entrepreneurship & Business Development",
+    issuer: "Cyber Shujaa",
+    year: "Feb 2023 - Apr 2023",
+    details: "Gained insights into entrepreneurship and business strategy within the tech industry."
+  },
+  {
+    name: "Cisco IT Essentials: PC Hardware & Software",
     issuer: "Cisco",
-    year: "2019",
-    details: "Advanced networking certification demonstrating proficiency in planning, implementing, verifying, and troubleshooting complex enterprise network solutions."
+    year: "Mar 2010 - Aug 2010",
+    details: "Mastered fundamental hardware and software troubleshooting techniques."
   },
   {
-    name: "CompTIA Security+",
-    issuer: "CompTIA",
-    year: "2017",
-    details: "Certification validating foundational skills in network security, compliance, operational security, threats, and vulnerabilities."
-  },
-  {
-    name: "Microsoft Certified: Azure Administrator",
-    issuer: "Microsoft",
-    year: "2020",
-    details: "Certification for implementing, monitoring, and maintaining Microsoft Azure solutions, including major services related to compute, storage, network, and security."
-  },
-  {
-    name: "Certified Information Systems Security Professional (CISSP)",
-    issuer: "ISC²",
-    year: "2021",
-    details: "Advanced security certification covering critical security domains including access control, security operations, and software development security."
+    name: "Cisco Network Academy",
+    issuer: "Cisco",
+    year: "Jun 2010 - Aug 2010",
+    details: "Developed a strong foundation in networking principles and technologies."
   }
 ];
 
@@ -91,7 +97,7 @@ export function EducationSection() {
   }, []);
 
   return (
-    <section id="education" className="py-24" ref={containerRef}>
+    <section id="education" className="py-24 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-blue-950" ref={containerRef}>
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-element opacity-0">
           <span className="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary/10 rounded-full mb-4">
@@ -120,9 +126,9 @@ export function EducationSection() {
               {educations.map((edu, index) => (
                 <div 
                   key={index} 
-                  className="glass-card group overflow-hidden transition-all duration-500"
+                  className="glass-card group overflow-hidden transition-all duration-500 hover:-translate-y-2"
                 >
-                  <div className="p-6">
+                  <div className="p-6 border-l-4 border-primary">
                     <h4 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
                       {edu.degree}
                     </h4>
@@ -156,13 +162,14 @@ export function EducationSection() {
               Certifications
             </h3>
             
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid gap-4">
               {certifications.map((cert, index) => (
                 <div 
                   key={index} 
-                  className="glass-card group overflow-hidden transition-all duration-500"
+                  className="glass-card group overflow-hidden transition-all duration-500 hover:-translate-y-1 transform"
+                  style={{ transitionDelay: `${index * 0.05}s` }}
                 >
-                  <div className="p-6">
+                  <div className="p-5 border-l-4 border-primary">
                     <h4 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
                       {cert.name}
                     </h4>
@@ -173,7 +180,7 @@ export function EducationSection() {
                       <span>{cert.year}</span>
                     </div>
                     
-                    <div className="h-0 overflow-hidden transition-all duration-300 group-hover:h-auto group-hover:mt-2">
+                    <div className="transition-all duration-300 max-h-0 overflow-hidden group-hover:max-h-20 opacity-0 group-hover:opacity-100">
                       <p className="text-sm text-foreground/80">{cert.details}</p>
                     </div>
                   </div>

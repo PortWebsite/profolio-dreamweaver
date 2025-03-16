@@ -12,8 +12,8 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     title: "IT Support Specialist",
-    company: "Freelance",
-    period: "2014 - Present",
+    company: "Freelance (Self)",
+    period: "Jan 2014 - Present",
     contributions: [
       "Diagnosed and resolved complex hardware/software issues for 50+ clients, achieving 95% first-time resolution rate.",
       "Conducted network setup and security assessments for small to medium-sized businesses, implementing solutions that reduced security incidents by 80%.",
@@ -24,16 +24,16 @@ const experiences: ExperienceItem[] = [
     ]
   },
   {
-    title: "Network Administrator",
-    company: "TechSolutions Inc.",
-    period: "2016 - 2020",
+    title: "IT Support Specialist (Contract)",
+    company: "Soft Tribe Company Ltd",
+    period: "Mar 2017 - Jan 2019",
     contributions: [
-      "Managed and maintained network infrastructure serving 200+ users across multiple locations.",
-      "Implemented VPN solutions for secure remote access, increasing workforce mobility by 40%.",
-      "Conducted regular security audits and vulnerability assessments, reducing potential threats by 75%.",
-      "Designed and deployed scalable network architectures that accommodated 30% company growth.",
-      "Maintained 99.9% network uptime through proactive monitoring and swift incident response.",
-      "Collaborated with IT team to integrate new technologies while ensuring backward compatibility."
+      "Managed IT infrastructure for a company with 100+ employees across multiple departments.",
+      "Reduced system downtime by 40% through implementing proactive maintenance protocols and monitoring systems.",
+      "Streamlined technical support process, decreasing average ticket resolution time from 3 days to 6 hours.",
+      "Upgraded network security protocols and implemented user training that reduced security incidents by 65%.",
+      "Led successful migration to cloud-based collaboration tools, improving team productivity by 30%.",
+      "Created comprehensive documentation for IT systems and procedures, facilitating faster onboarding and troubleshooting."
     ]
   }
 ];
@@ -61,7 +61,7 @@ export function ExperienceSection() {
   }, []);
 
   return (
-    <section id="experience" className="py-24 bg-secondary/50 dark:bg-secondary/10" ref={containerRef}>
+    <section id="experience" className="py-24 bg-gradient-to-bl from-gray-100 to-blue-50 dark:from-gray-900 dark:to-blue-950" ref={containerRef}>
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-element opacity-0">
           <span className="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary/10 rounded-full mb-4">
@@ -80,7 +80,7 @@ export function ExperienceSection() {
         
         <div className="relative mt-12">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-px bg-border"></div>
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/20 via-primary to-primary/20"></div>
           
           {experiences.map((exp, index) => (
             <div key={index} className="mb-12 md:mb-24 relative">
@@ -90,7 +90,7 @@ export function ExperienceSection() {
                 
                 {/* Experience card */}
                 <div className={`w-full md:w-1/2 pl-8 md:pl-0 ${index % 2 === 0 ? 'md:pr-16' : 'md:pl-16'} animate-element opacity-0`}>
-                  <div className="glass-card hover:shadow-xl p-6 md:p-8">
+                  <div className="glass-card hover:shadow-xl p-6 md:p-8 transform transition-all duration-500 hover:-translate-y-2">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 rounded-lg bg-primary/10 text-primary">
                         <Briefcase size={20} />

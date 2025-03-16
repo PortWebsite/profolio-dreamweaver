@@ -50,8 +50,6 @@ export function SkillsSection() {
         const [entry] = entries;
         if (entry.isIntersecting) {
           setIsVisible(true);
-          entry.target.classList.add('animate-slide-up');
-          entry.target.classList.remove('opacity-0');
           observer.unobserve(entry.target);
         }
       },
@@ -66,15 +64,15 @@ export function SkillsSection() {
   }, []);
 
   return (
-    <section id="skills" className="py-24" ref={containerRef}>
-      <div className="section-container opacity-0">
+    <section id="skills" className="py-24 bg-gradient-to-tr from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950" ref={containerRef}>
+      <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary/10 rounded-full mb-4">
             My Skills
           </span>
           
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 font-display">
-            Technical Expertise
+            Professional Skills
           </h2>
           
           <p className="text-foreground/80">
@@ -87,21 +85,21 @@ export function SkillsSection() {
           {skills.map((skill, index) => (
             <div 
               key={skill.name}
-              className={`bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+              className={`glass-card dark:bg-gray-800/70 rounded-xl p-6 shadow-xl transform transition-all duration-500 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4 flex justify-between items-center">
+              <div className="mb-5 flex justify-between items-center">
                 <h3 className="text-xl font-semibold">{skill.name}</h3>
                 <span className="text-primary font-medium">{skill.level}%</span>
               </div>
               
-              <div className="progress-bar mb-4">
+              <div className="mb-4 bg-gray-200 dark:bg-gray-700 h-2.5 rounded-full overflow-hidden">
                 <div 
-                  className="progress-bar-fill"
+                  className={`h-full bg-gradient-to-r from-primary to-blue-400 rounded-full transition-all duration-1500 ease-out ${isVisible ? '' : 'w-0'}`}
                   style={{ 
-                    '--progress-value': `${skill.level}%`,
-                    animationDelay: `${index * 0.1 + 0.3}s`
-                  } as React.CSSProperties}
+                    width: isVisible ? `${skill.level}%` : '0%',
+                    transitionDelay: `${index * 0.1 + 0.3}s`
+                  }}
                 ></div>
               </div>
               

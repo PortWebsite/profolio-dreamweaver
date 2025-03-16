@@ -24,7 +24,7 @@ export function AboutSection() {
   }, []);
 
   return (
-    <section id="about" className="py-24 bg-secondary/50 dark:bg-secondary/10" ref={containerRef}>
+    <section id="about" className="py-24 bg-gradient-to-br from-secondary/80 to-accent/20 dark:from-secondary/20 dark:to-accent/10" ref={containerRef}>
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
@@ -38,7 +38,7 @@ export function AboutSection() {
             
             <div className="animate-element opacity-0 space-y-4 text-foreground/80">
               <p>
-                As an experienced IT Support Specialist with over 8 years in the field, I bring a comprehensive understanding of network infrastructure, cybersecurity protocols, and technical support excellence.
+                I'm <span className="font-semibold">Peter Chuwa</span>, an experienced IT Support Specialist with over 8 years in the field. I bring a comprehensive understanding of network infrastructure, cybersecurity protocols, and technical support excellence.
               </p>
               
               <p>
@@ -64,7 +64,7 @@ export function AboutSection() {
             <div className="aspect-square rounded-2xl overflow-hidden shadow-xl relative z-10">
               <img 
                 src="/about.jpg" 
-                alt="Professional headshot" 
+                alt="Professional headshot of Peter Chuwa" 
                 className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;

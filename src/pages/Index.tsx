@@ -6,9 +6,10 @@ import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
 import { ExperienceSection } from '@/components/ExperienceSection';
 import { EducationSection } from '@/components/EducationSection';
-import { ProjectsSection } from '@/components/ProjectsSection';
 import { ContactSection } from '@/components/ContactSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 const Index = () => {
   // Smooth scroll to section when URL hash changes
@@ -49,9 +50,10 @@ const Index = () => {
       <SkillsSection />
       <ExperienceSection />
       <EducationSection />
-      <ProjectsSection />
+      <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };
