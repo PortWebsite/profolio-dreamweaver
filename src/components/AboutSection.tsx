@@ -1,4 +1,5 @@
 
+import { Download } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 export function AboutSection() {
@@ -50,12 +51,24 @@ export function AboutSection() {
               </p>
             </div>
             
-            <div className="animate-element opacity-0 pt-4">
+            <div className="animate-element opacity-0 pt-4 flex gap-4 flex-wrap">
               <a 
-                href="#contact"
+                href="https://wa.me/254758913807?text=Hello%20Peter%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project%20or%20opportunity."
+                target="_blank"
+                rel="noreferrer"
                 className="btn-hover px-6 py-3 text-base font-medium text-white bg-primary rounded-full inline-flex items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
               >
                 Get In Touch
+              </a>
+              
+              <a 
+                href="/Peter_CV.pdf" 
+                download
+                className="group relative overflow-hidden px-6 py-3 text-base font-medium text-primary bg-transparent border-2 border-primary rounded-full inline-flex items-center gap-2 shadow-lg hover:text-white transition-all duration-300"
+              >
+                <span className="relative z-10">Download CV</span>
+                <Download size={18} className="relative z-10" />
+                <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
               </a>
             </div>
           </div>

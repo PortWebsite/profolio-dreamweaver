@@ -109,12 +109,12 @@ export function ContactSection() {
                   <div>
                     <h4 className="text-sm font-medium text-foreground/70 mb-1">LinkedIn</h4>
                     <a 
-                      href="https://linkedin.com" 
+                      href="https://www.linkedin.com/in/peter-chuwa-77002488/" 
                       target="_blank" 
                       rel="noreferrer"
                       className="font-medium hover:text-primary transition-colors"
                     >
-                      linkedin.com/in/yourprofile
+                      linkedin.com/in/peter-chuwa-77002488
                     </a>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export function ContactSection() {
                 <h4 className="text-sm font-medium text-foreground/70 mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/in/peter-chuwa-77002488/" 
                     target="_blank"
                     rel="noreferrer" 
                     className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
